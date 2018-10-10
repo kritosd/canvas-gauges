@@ -115,11 +115,11 @@ function es5transpile(type = 'all', withSourceMaps = true, resolve = () => {}) {
     if (withSourceMaps) {
         stream = stream.pipe(sourcemaps.init({ loadMaps: true }));
     }
-
+/*
     stream = stream.pipe(uglify({
         preserveComments: (node, comment) => comment.line === 1
     }));
-
+*/
     if (withSourceMaps) {
         stream = stream.pipe(sourcemaps.write('.'));
     }
